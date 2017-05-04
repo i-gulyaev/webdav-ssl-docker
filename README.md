@@ -24,3 +24,7 @@ connection. They need to be in a directory and called `web.crt` and
 ## Run Container
 
     docker run -d --name webdav-ssl -v /path/to/htpasswd:/htpasswd -v /path/to/certs:/certs -v /path/to/data:/var/www/webdav webdav-ssl
+
+## Test
+    curl -k --user username:'password' -T filename https://localhost/webdav/filename
+    
